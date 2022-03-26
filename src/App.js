@@ -19,7 +19,9 @@ class BooksApp extends React.Component {
 
   // moving a book from one bookshelf to another and updates the books in the server and then update the state
   putBookOnShelf = (book, shelf) => {
-    BooksAPI.update(book, shelf);
+    BooksAPI.update(book, shelf).then((books) => {
+      console.log(books);
+    })
 
     let updatedBooks = [];
     updatedBooks = this.state.books.filter((b) => b.id !== book.id);

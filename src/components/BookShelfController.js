@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class BookShelfChanger extends Component {
+class BookShelfController extends Component {
   state = {
     value: this.props.shelf,
   };
@@ -25,4 +25,4 @@ class BookShelfChanger extends Component {
   }
 }
 
-export default BookShelfChanger;
+export default BookShelfController;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class SearchBooksInput extends Component {
+class SearchInput extends Component {
   state = {
     value: "",
   };
@@ -34,4 +34,4 @@ class SearchBooksInput extends Component {
   }
 }
 
-export default SearchBooksInput;
+export default SearchInput;

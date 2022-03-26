@@ -1,21 +1,19 @@
-import React, { Component } from "react";
-import SearchBar from "../components/SearchBar";
+import React from "react";
+import SearchBox from "../components/SearchBox";
 import SearchResults from "../components/SearchResults";
 
-class BookSearch extends Component {
-  render() {
-    const { books, searchBooks, onMove, onSearch, onReset } = this.props;
+function BookSearch(props) {
+    const {books, searchBooks, onMove, onSearch, onReset} = props;
     return (
-      <div className="search-books">
-        <SearchBar onSearch={onSearch} onReset={onReset} />
-        <SearchResults
-          books={books}
-          searchBooks={searchBooks}
-          onMove={onMove}
-        />
-      </div>
+        <div className="search-books">
+            <SearchBox onSearch={onSearch} onReset={onReset}/>
+            <SearchResults
+                books={books}
+                searchBooks={searchBooks}
+                onMove={onMove}
+            />
+        </div>
     );
-  }
 }
 
 export default BookSearch;

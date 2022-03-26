@@ -1,18 +1,16 @@
-import React, { Component } from "react";
-import CloseSearchButton from "./CloseSearchButton";
-import SearchBooksInput from "./SearchBooksInput";
+import React from "react";
+import ArrowBack from "./ArrowBack";
+import SearchInput from "./SearchInput";
 
-class SearchBar extends Component {
-  render() {
-    const { onSearch, onReset } = this.props;
+function SearchBox(props) {
+    const {onSearch, onReset} = props;
 
     return (
-      <div className="search-books-bar">
-        <CloseSearchButton onReset={onReset} />
-        <SearchBooksInput onSearch={onSearch} />
-      </div>
+        <div className="search-books-bar">
+            <ArrowBack onReset={onReset}/>
+            <SearchInput onSearch={onSearch}/>
+        </div>
     );
-  }
 }
 
-export default SearchBar;
+export default SearchBox;

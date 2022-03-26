@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function CloseSearchButton(props) {
+function ArrowBack(props) {
   const { onReset } = props;
 
   return (
@@ -13,4 +13,4 @@ function CloseSearchButton(props) {
   );
 }
 
-export default CloseSearchButton;
+export default ArrowBack;
